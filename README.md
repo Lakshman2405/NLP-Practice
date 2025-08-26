@@ -79,13 +79,13 @@ The core of the project lies in these two custom-built functions:
 def T_test(w1, w2, c1, c2, c12):
     # ... calculates expected and observed means
     # ... returns t-value for the word pair (w1, w2)
-
+```
 ### **Chi-Square Test Function (chi_2_test)**
 ```python
 def chi_2_test(w1, w2, c1, c2, c12):
     # ... builds a 2x2 contingency table
     # ... calculates the chi-square statistic
-
+```
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🛠️ Technologies Used
 Python: Core programming language
