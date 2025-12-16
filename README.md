@@ -1,100 +1,186 @@
-# 📊 Statistical NLP: Hypothesis Testing for Word Collocations
+# Natural Language Processing (NLP) Algorithms Portfolio
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
-![NLTK](https://img.shields.io/badge/NLTK-Latest-orange?logo=natural-language-toolkit)
-![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter)
-![License](https://img.shields.io/badge/License-MIT-green)
+## 📌 Overview
+This repository is a curated portfolio of implementations of **core Natural Language Processing (NLP) algorithms**, ranging from **classical statistical methods** to **machine learning** and **deep learning** approaches.
 
-An interactive Natural Language Processing (NLP) project that applies statistical hypothesis testing (**T-Test** and **Chi-Square Test**) to identify significant word collocations in text. This project demonstrates how to move beyond basic text analysis to derive statistically validated insights.
+The objective of this project is to build a **strong conceptual and practical foundation in NLP** by implementing algorithms from scratch or using standard libraries, and understanding how language is modeled computationally.
 
----
-
-## 🧠 What are Word Collocations?
-
-Collocations are words that frequently appear together, forming a meaningful unit (e.g., "strong coffee," "make a decision"). This project answers a key question:
-> **"Are these two words appearing together merely by chance, or is their association statistically significant?"**
+Rather than focusing on a single application, this repository serves as a **learning-oriented NLP laboratory**, covering multiple paradigms used in real-world NLP systems.
 
 ---
 
-## ⚙️ How It Works
-
-The project follows a complete NLP pipeline:
-
-1.  **Text Preprocessing:** Loads text data and cleans it (tokenization, stopword removal, contraction handling).
-2.  **Frequency Analysis:** Calculates individual word frequencies and co-occurrence rates.
-3.  **Statistical Testing:** Employs two fundamental tests to measure the significance of word pairs:
-    *   **T-Test:** Checks if the observed co-occurrence rate is significantly different from the expected rate under the assumption of independence.
-    *   **Chi-Square Test:** Assesses the independence between two words in a contingency table.
-4.  **Result Interpretation:** Compares the calculated test values against critical values to determine if a word pair is a true collocation.
+## 🎯 Objectives
+- Understand how text is represented numerically
+- Implement classical NLP and statistical language models
+- Apply machine learning techniques to NLP problems
+- Explore probabilistic sequence models
+- Build neural network models for language modeling and sequence learning
+- Compare strengths and limitations of different NLP approaches
 
 ---
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## 🚀 Getting Started
 
-### Prerequisites
+## 🧠 NLP Techniques Covered
 
-Ensure you have the following installed:
-*   Python 3.x
-*   Jupyter Notebook/Lab
-*   The required Python libraries:
+### 1️⃣ Classical NLP & Statistical Methods
+These methods focus on frequency-based and rule-inspired modeling of language.
 
-### Installation & Setup
+#### 🔹 Bag of Words (BoW) & TF-IDF
+- Implemented Bag of Words and TF-IDF vectorization
+- Applied **Naive Bayes classification** for sentiment analysis
+- Evaluated model performance using accuracy, precision, recall, and F1-score
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/Lakshman2405/Statistical-NLP-Collocations.git
-    cd Statistical-NLP-Collocations
-    ```
-
-2.  **Install required packages:**
-    ```bash
-    pip install nltk numpy python-docx
-    ```
-
-3.  **Download NLTK Data:**
-    Run the first cell of the Jupyter Notebook (`NLP Lab 2.ipynb`) to download all necessary NLTK datasets. This only needs to be done once.
-    ```python
-    import nltk
-    nltk.download('all')
-    ```
-
-4.  **Run the Notebook:**
-    Launch Jupyter Notebook and open `NLP_Lab_2.ipynb` to explore the code and run the analysis.
-    ```bash
-    jupyter notebook
-    ```
+**Concepts covered:**
+- Text vectorization
+- Term weighting
+- Probabilistic classification
 
 ---
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## 📈 Methodology & Code Overview
 
-### 1. Text Preprocessing
-The code uses a custom class `REReplacer` to handle contractions (e.g., "won't" → "will not") and NLTK's `stopwords` corpus to remove common, uninformative words.
+#### 🔹 Collocation Analysis (T-score & Chi-square)
+- Identified statistically significant word collocations
+- Implemented **t-score** and **chi-square** association measures
+- Compared collocation detection sensitivity
 
-### 2. Hypothesis Testing Functions
-The core of the project lies in these two custom-built functions:
+**Concepts covered:**
+- Word association measures
+- Hypothesis testing in NLP
+- Statistical dependency in language
 
-#### **T-Test Function (`T_test`)**
-```python
-def T_test(w1, w2, c1, c2, c12):
-    # ... calculates expected and observed means
-    # ... returns t-value for the word pair (w1, w2)
-```
-### **Chi-Square Test Function (chi_2_test)**
-```python
-def chi_2_test(w1, w2, c1, c2, c12):
-    # ... builds a 2x2 contingency table
-    # ... calculates the chi-square statistic
-```
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-🛠️ Technologies Used
-Python: Core programming language
+---
 
-NLTK: Natural Language Toolkit for text processing
+#### 🔹 Hindle & Rooth Attachment Ambiguity
+- Implemented attachment ambiguity resolution using bigram statistics
+- Determined whether prepositional phrases attach to nouns or verbs
+- Used probabilistic reasoning over corpus statistics
 
-NumPy: For numerical computations
+**Concepts covered:**
+- Syntactic ambiguity
+- Probabilistic attachment models
+- Linguistic structure analysis
 
-python-docx: For reading .docx files
+---
 
-Jupyter Notebook: For an interactive development environment
+### 2️⃣ Probabilistic Models for NLP
 
+#### 🔹 Hidden Markov Models (HMM)
+- Implemented **Forward–Backward (Trellis) algorithm**
+- Implemented **Viterbi algorithm** for optimal state decoding
+- Calculated sequence likelihoods and posterior state probabilities
+
+**Concepts covered:**
+- Sequence modeling
+- State transitions and emissions
+- Dynamic programming
+
+---
+
+#### 🔹 Probabilistic Context-Free Grammar (PCFG)
+- Defined probabilistic grammar rules
+- Implemented parsing using:
+  - CYK / Inside algorithm (all possible parses)
+  - Viterbi parsing (most probable parse)
+- Analyzed syntactic ambiguity through parse trees
+
+**Concepts covered:**
+- Grammar-based parsing
+- Probabilistic syntax
+- Tree-based language representations
+
+---
+
+### 3️⃣ Machine Learning for NLP
+
+#### 🔹 Word Sense Disambiguation (Naive Bayes)
+- Used Bag of Words features
+- Trained a **Naive Bayes classifier** to disambiguate word senses
+- Evaluated predictions on unseen sentences
+
+**Concepts covered:**
+- Supervised NLP classification
+- Feature extraction for semantics
+- Context-based meaning resolution
+
+---
+
+#### 🔹 Word2Vec (Distributional Semantics)
+- Trained Word2Vec embeddings using Gensim
+- Learned vector representations of words
+- Analyzed semantic similarity between words
+
+**Concepts covered:**
+- Distributed word representations
+- Context windows
+- Semantic similarity
+
+---
+
+### 4️⃣ Deep Learning for NLP
+
+#### 🔹 Recurrent Neural Networks (RNN)
+- Built a basic RNN model for sequence modeling
+- Demonstrated limitations such as vanishing gradients
+
+---
+
+#### 🔹 Long Short-Term Memory (LSTM)
+- Implemented an LSTM-based next-word prediction model
+- Trained on a real text corpus
+- Generated new text sequences from seed input
+
+**Concepts covered:**
+- Sequence learning
+- Long-term dependency modeling
+- Neural language models
+
+---
+
+#### 🔹 Sequence-to-Sequence (Toy Translation)
+- Implemented a simple encoder–decoder RNN model
+- Performed toy machine translation
+- Demonstrated teacher forcing and decoding logic
+
+**Concepts covered:**
+- Seq2Seq architecture
+- Encoder–decoder paradigm
+- Neural machine translation basics
+
+---
+
+## 🛠️ Tools & Technologies
+- **Programming Language:** Python  
+- **Libraries & Frameworks:**
+  - NLTK
+  - scikit-learn
+  - Gensim
+  - TensorFlow / Keras
+  - NumPy, pandas
+
+---
+
+## 📊 Key Learnings
+- Differences between classical, probabilistic, ML, and DL-based NLP
+- Importance of feature representation in language modeling
+- Strengths and limitations of statistical NLP
+- How deep learning improves semantic understanding
+- Trade-offs between interpretability and performance
+
+---
+
+## 🚀 Future Improvements
+- Apply TF-IDF + word embeddings jointly
+- Extend sequence models using attention mechanisms
+- Add transformer-based models (BERT-style)
+- Evaluate models on larger benchmark datasets
+
+---
+
+## 📎 Disclaimer
+This repository is intended for **educational and learning purposes**.  
+Some datasets and implementations are simplified to highlight algorithmic understanding rather than production deployment.
+
+---
+
+## 📫 Author
+**Lakshman Guru Sai**  
+B.Tech CSE (AI & DS)  
+Interested in AI, NLP, Machine Learning, and Data Science
